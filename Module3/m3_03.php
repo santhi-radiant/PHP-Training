@@ -33,7 +33,7 @@ class Fruit
 {
     function fname()
     {
-        $this->name="Apple";
+       echo $this->name="Apple";
     }
 }
 //object creation
