@@ -43,6 +43,13 @@ function fruitprice()
 fruitprice();
 fruitprice();
 ?>
+<h3>Echo vs Print</h3>
+<?php
+
+echo 'hello  ','  more  ','  onemore'.'<br>';
+print 'printstring';
+
+?>
     </pre>
 </body>
 </html>
