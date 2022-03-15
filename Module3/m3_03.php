@@ -6,6 +6,8 @@
 </head>
 <body>
     <h2>Data Types</h2>
+
+    
     
 </body>
 
