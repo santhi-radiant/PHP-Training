@@ -26,6 +26,21 @@ $condition=null;
 var_dump($condition);
 
 ?>
+<h3>classes and objects</h3>
+<?php
+//class creation
+class Fruit
+{
+    function fname()
+    {
+        $this->name="Apple";
+    }
+}
+//object creation
+$obj=new Fruit();
+$obj->fname();
+
+?>
     
 </body>
 
