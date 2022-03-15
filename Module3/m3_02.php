@@ -34,7 +34,8 @@ function fruitprice()
 {
     static $n=1;// static variable remember the value last time used or called
    $price=20;//local variable
-   echo' apple price per kg is:'.$price; 
+   echo' apple price per kg is:'.$price.'<br>';
+   echo' static variable value is:'.$n.'<br>'; 
    $n++;
 }
 
