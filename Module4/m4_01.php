@@ -1,19 +1,14 @@
 <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
-NAME:<input type="name" name="name">
-<input type="submit" name="submit" value="submit">
+NAME:<input type="name" name="fname">
+<input type="submit" name="submit">
 </form>
 
 <?php
 if($_SERVER["REQUEST_METHOD"]=="POST")
 {
-    if(empty($fname))
-    {
-        echo 'Name field Empty ';
-    }
-    else
-    {
-    $fname=$_REQUEST['name'];
+    
+    $fname=$_REQUEST['fname'];
     echo $fname;
-    }
+    
 }
 ?>
