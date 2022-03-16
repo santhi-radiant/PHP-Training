@@ -14,4 +14,5 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 ?>
 <br>
 <br>
-<a href="get.php?name=santhi&link=google.com">Link</a>
+<a href="get.php?name=santhi&link=google.com
+">Link</a>
