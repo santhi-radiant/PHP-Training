@@ -60,6 +60,28 @@ switch($day)
     break;
 }
 ?>
+<h2>While and Do..while</h2>
+
+<?php
+//example for while
+$n=1;
+while($n<10)
+{
+    echo 'The value of N is'.$n.'<br>';
+    $n++;
+}
+
+echo '<br>';
+$d=0;
+do
+{
+echo 'This is do while';
+$d++;
+}
+while($d>5)
+?>
+
+
     </pre>
 </body>
 
