@@ -12,12 +12,28 @@
  $color=array('Red','Green','Blue');
 $color[3]="Orange";
 echo 'The second color is'.$color[1];
-//print all colors
+//indexed array
 echo '<br>';
 for($i=0;$i<count($color);$i++)
 {
-    echo $color[i];
+    echo $color[$i].'<br>';
 }
+ ?>
+
+<h3>Associative array</h3>
+ <?php
+ $days=array('Monday'=>"1",
+                'Tuesday'=>"2",
+                    'Wednessday'=>"3");
+$days['Thursday']="4";
+echo 'Monday is'.$days['Monday'];
+//associative array
+echo '<br>';
+foreach($days as $value)
+{
+echo $value.'<br>';
+}
+
  ?>
 
     </pre>
