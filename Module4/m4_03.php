@@ -22,11 +22,13 @@ while(!feof($myfile))
 fclose($myfile);
 /* 
 Write file
+w-for write the file-it overwrite the file
+a-for append the file but it appends file
 */
-$myfile=fopen("writefile.txt","w")or die("unable to create file");
-$value1="This is First content to write in file.";
+$myfile=fopen("writefile.txt","a")or die("unable to create file");
+$value1="This is Third content to write in file.\n";
 fwrite($myfile,$value1);
-$value2="This is Second content to write in file.";
+$value2="This is Fourth content to write in file.\n";
 fwrite($myfile,$value2);
 fclose($myfile);
 ?>
