@@ -10,7 +10,7 @@ $myfile=fopen("readfile.txt","r")or die("unable to reach file");
 //read line by line
 while(!feof($myfile))
 {
-    //echo fgets($myfile).'<br>';
+    echo fgets($myfile).'<br>';
 }
 //read character by character
 while(!feof($myfile))
