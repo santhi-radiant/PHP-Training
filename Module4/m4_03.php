@@ -20,5 +20,13 @@ while(!feof($myfile))
 
 
 fclose($myfile);
-
+/* 
+Write file
+*/
+$myfile=fopen("writefile.txt","w")or die("unable to create file");
+$value1="This is First content to write in file.";
+fwrite($myfile,$value1);
+$value2="This is Second content to write in file.";
+fwrite($myfile,$value2);
+fclose($myfile);
 ?>
