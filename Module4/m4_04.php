@@ -2,7 +2,7 @@
 //cookie example
 
 $cookie_name="fname";
-$cookie_value="This is value of cookie";
+$cookie_value="santhi";
 setcookie($cookie_name,$cookie_value,time()+(86400*10),"/");
 
 ?>
@@ -16,8 +16,15 @@ setcookie($cookie_name,$cookie_value,time()+(86400*10),"/");
 
 
         <?php
-            echo "The cookie name is ".$cookiename."<br>";
-            
+        if(!isset($_COOKIE[$cookie_name]))
+        {
+            echo "The cookie name is ".$cookie_name."<br>";
+        }
+        else
+        {
+            echo "Cookie ".$cookie_name."is set<br>";
+            echo "Value is ".$_COOKIE[$cookie_name];
+        }
 
         ?>
     </body>
