@@ -1,0 +1,4 @@
+<?php
+//mysql database example
+
+?>
