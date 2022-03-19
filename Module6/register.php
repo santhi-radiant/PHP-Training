@@ -16,7 +16,7 @@ include 'dbconfig.php';
     User Name:  <input type="text" name="uname" placeholder="User Name"><br>
     Email:  <input type="text" name="email1" placeholder="Email"><br>
    Confirm Email:  <input type="text" name="email2" placeholder="Confirm Email"><br>
-   Password:  <input type="text" name="password1" placeholder="Password"><br>
+   Password:  <input type="password" name="password1" placeholder="Password"><br>
    Confirm Password:  <input type="text" name="password2" placeholder="Confirm Password"><br>
 Picture:<input type="file"name="file" placeholder="Profile Picture"><br>
 
