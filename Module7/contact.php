@@ -41,7 +41,6 @@
 
 <?php
 
-include 'dbconfig.php';
 function valid($data)
 {
 $data=trim($data);
@@ -49,37 +48,50 @@ $data=stripslashes($data);
 $data=htmlspecialchars($data);
 $data=mysql_escape_string($data);
 return $data;
-
 }
 
 if(isset($_POST["submit"]))
 {
-$name=valid($_POST['name']);
+$fname=valid($_POST['fname']);
 $lname=valid($_POST['lname']);
-$uname=valid($_POST['uname']);
+$email=valid($_POST['email']);
+$phone=valid($_POST['phone']);
+$message=valid($_POST['message']);
 
-$email1=valid($_POST['email1']);
-$email2=valid($_POST['email2']);
-
-$pass1=valid($_POST['password1']);
-$pass2=valid($_POST['password2']);
-
-
-
-if($pass1==$pass2)
+if($_POST['fname']==" ")
 {
-$pass=md5($pass1);
+    echo 'First Name Required..';
 }
-if($email1==$email2)
+else if($_POST['lname']==" ")
 {
-$email=$email1;
+    echo 'Last Name Required..';
+}
+else if($_POST['email']==" ")
+{
+    echo 'Email Required..';
+}
+else if(!filter_var($email,FILTER_VALIDATE_EMAIL))
+{
+    echo 'Enter Valid Email..';
+}
+else if($_POST['phone']==" ")
+{
+    echo 'Phone Number Required..';
+}
+else if($_POST['message']==" ")
+{
+    echo 'Message Required..';
+}
+else
+{
+    $to="info@radiantcloud.co";
+    $subject="My Subject for test purpose";
+    $message1="Some Message for test purpose";
+    $header="From: webmaster@website.com";
+    mail($to,$subject,$message1,$header);
+    echo '<script type="text/javascript">alert("Your message submitted successfully"); window.location=redirectpage.php; </script>';
+
 }
 
-if(isset($_POST["submit"]) && !empty($_FILES["file"]["name"])){
-    
-                $sql=mysql_query("insert into users(name,lname,uname,email,password,picture)values($name,$lname,$uname,$email,$password,$fileName)") or die(mysql_error());
-                echo "Registration Successful..";
-                exit();
-            
-
+}
 ?>
